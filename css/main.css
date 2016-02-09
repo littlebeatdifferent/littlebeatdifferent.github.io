@@ -105,8 +105,16 @@ body {
 
 .banner {
   width:980px;
-  height:300px;
   margin-bottom:30px;
+
+  filter: gray; /* IE6-9 */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+}
+
+.banner:hover {
+  filter:none;
+  -webkit-filter: grayscale(0);
 }
 
 .main-logo {
